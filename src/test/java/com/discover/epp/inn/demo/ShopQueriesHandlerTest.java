@@ -36,7 +36,7 @@ public class ShopQueriesHandlerTest implements AddressFixture, CountryFixture, S
 
         when(shopRepository.latestAddressByShopName("Farnborough")).thenReturn(shop);
 
-        Optional<Shop> actual = shopQueriesHandler.findByLatestAddressAndName();
+        Optional<Shop> actual = shopQueriesHandler.findByLatestAddressAndName("Farnborough");
 
         assertThat(actual.isPresent()).isTrue();
 

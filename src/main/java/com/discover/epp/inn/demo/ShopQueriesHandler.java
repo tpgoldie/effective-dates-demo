@@ -17,7 +17,7 @@ public class ShopQueriesHandler {
         this.shopRepository = shopRepository;
     }
 
-    public Optional<Shop> findByLatestAddressAndName() {
-        return Optional.empty();
+    public Optional<Shop> findByLatestAddressAndName(String shopName) {
+        return Optional.ofNullable(shopRepository.latestAddressByShopName(shopName));
     }
 }
