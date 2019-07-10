@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public class ShopQueriesHandler {
+public class ShopQueriesHandler implements ShopQueries {
 
     private ShopRepository shopRepository;
 
@@ -17,7 +17,7 @@ public class ShopQueriesHandler {
         this.shopRepository = shopRepository;
     }
 
-    public Optional<Shop> findByLatestAddressAndName(String shopName) {
-        return Optional.ofNullable(shopRepository.latestAddressByShopName(shopName));
+    public Optional<Shop> findByName(String shopName) {
+        return Optional.ofNullable(shopRepository.findByName(shopName));
     }
 }

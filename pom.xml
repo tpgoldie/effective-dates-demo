@@ -44,6 +44,12 @@
 			<version>3.5.7</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.neo4j</groupId>
+			<artifactId>neo4j-ogm-embedded-driver</artifactId>
+			<version>3.2.0-alpha06</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
