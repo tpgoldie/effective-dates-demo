@@ -1,6 +1,6 @@
 package com.discover.epp.inn.demo;
 
-public interface CountryFixture {
+public interface CountryFixture extends VersionFixture {
 
     default Country country(String name, String isoCode) {
 
@@ -8,6 +8,7 @@ public interface CountryFixture {
 
         entity.setIsoCode(isoCode);
         entity.setName(name);
+        entity.setVersion(version(1));
 
         return entity;
     }
